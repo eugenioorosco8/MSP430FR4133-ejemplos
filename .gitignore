@@ -1,0 +1,10 @@
+# Soluciones guiadas y autonomas - no publicas
+GUI_*
+AUT_*
+
+# Herramienta local (rutas hardcodeadas a esta PC)
+*.hta
+
+# Archivos temporales de Windows
+Thumbs.db
+desktop.ini
