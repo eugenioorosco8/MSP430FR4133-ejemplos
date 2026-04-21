@@ -1,0 +1,62 @@
+======================================================
+  COMO ACTUALIZAR EL REPO DE GITHUB - PASO A PASO
+  Repo: https://github.com/eugenioorosco8/MSP430FR4133-ejemplos
+======================================================
+
+SOLO LA PRIMERA VEZ EN UNA PC NUEVA (ya hecho en esta PC)
+----------------------------------------------------------
+1. Instalar Git:        https://git-scm.com
+2. Instalar GitHub CLI: winget install --id GitHub.cli
+3. Autenticarse:        gh auth login
+   - Elegir: GitHub.com -> HTTPS -> Login with a web browser
+   - Se abre el navegador, aceptar con la cuenta eugenioorosco8@gmail.com
+
+
+CADA VEZ QUE MODIFIQUES ARCHIVOS Y QUIERAS SUBIR
+----------------------------------------------------------
+1. Abrir PowerShell o CMD (Win + R, escribir "powershell", Enter)
+
+2. Ir a la carpeta de ejemplos:
+   cd "C:\Users\54264\OneDrive\ProfTitular\DocApuntes\MSP430\Claude\ejemplos"
+
+3. Ver que cambio (opcional, para saber que vas a subir):
+   git status
+
+4. Preparar todos los cambios:
+   git add .
+
+5. Guardar un snapshot con descripcion:
+   git commit -m "descripcion breve de lo que cambiaste"
+
+   Ejemplos de mensajes:
+     git commit -m "corregi PMM en DEM_G3_E3"
+     git commit -m "agregue ejemplo GL_U5_04"
+     git commit -m "fix volatile en archivos ADC"
+
+6. Subir a GitHub:
+   git push
+
+
+NOTAS IMPORTANTES
+----------------------------------------------------------
+- Los archivos GUI_* y AUT_* NUNCA se suben (estan en .gitignore)
+  Quedan solo en tu OneDrive, no aparecen en GitHub.
+
+- Si pasa mucho tiempo entre sesiones, puede pedir login de nuevo:
+  gh auth login   (mismos pasos que la primera vez)
+
+- Para ver el historial de lo que subiste:
+  git log --oneline
+
+- Si queres ver el repo en el navegador:
+  gh repo view --web
+
+
+RESUMEN RAPIDO (copia y pega esto cada vez)
+----------------------------------------------------------
+cd "C:\Users\54264\OneDrive\ProfTitular\DocApuntes\MSP430\Claude\ejemplos"
+git add .
+git commit -m "descripcion del cambio"
+git push
+
+======================================================
